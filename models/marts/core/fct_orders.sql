@@ -19,7 +19,7 @@ order_payments as (
 
 final as (
     select
-        o.order_id,
+        o.order_idz,
         o.customer_id,
         o.order_date,
         coalesce(op.amount, 0) as amount
@@ -28,3 +28,5 @@ final as (
 )
 
 select * from final
+
+
